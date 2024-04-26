@@ -9,6 +9,7 @@
     </ul>
     <!-- 展示区 -->
     <div class="news-content">
+      <!-- 此处用于展示新闻详情页 -->
       <RouterView></RouterView>
     </div>
   </div>

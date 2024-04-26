@@ -24,7 +24,7 @@
 
   // 监视 -- watch实现
   // watch([temp, height], (value) => {
-  //   // 从value中回去最新的水温（newTemp）、最新的水位（newHeight）
+  //   // 从value中获取最新的水温（newTemp）、最新的水位（newHeight）
   //   let [newTemp, newHeight] = value
   //   if (newTemp >= 60 || newHeight >= 80) {
   //     console.log('给服务器发请求')

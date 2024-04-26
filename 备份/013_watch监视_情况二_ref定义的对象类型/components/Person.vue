@@ -33,7 +33,7 @@
 
   // 监视
   // watch的第一个参数是：被监视的数据
-  // watch的第二个参数是：监视的毁掉
+  // watch的第二个参数是：监视的回调
   // watch的第三个参数是：配置对象（deep，immediate 等等...）
 
   // 情况一：监视【ref】定义的【对象类型】数据，监视的是对象的地址是否变化。
@@ -46,8 +46,8 @@
   watch(
     person,
     (newValue, oldValue) => {
-      // 若修改的是 ref 定义的对象中的属性，newValue和oldValue指向相同的内存地址
-      // 若修改这个 ref 定义的对象，newValue是指向新的内存地址，oldValue指向旧的内存地址
+      // 若修改的是 ref 定义的对象中的属性，newValue 和 oldValue 指向相同的内存地址
+      // 若修改这个 ref 定义的对象，newValue 是指向新的内存地址，oldValue 指向旧的内存地址
       console.log('person 变化了', newValue, oldValue)
     },
     {

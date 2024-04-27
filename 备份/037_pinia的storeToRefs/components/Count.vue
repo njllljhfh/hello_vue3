@@ -1,7 +1,7 @@
 <template>
   <div class="conut">
-    <h2>当前求和为：{{ sum }}，放大10倍后：{{ bigSum }} </h2>
-    <h3>欢迎来到：{{ school }}，坐落于：{{ address }}，大写：{{ upperSchool }}</h3>
+    <h2>当前求和为：{{ sum }} </h2>
+    <h3>欢迎来到：{{ school }}，坐落于：{{ address }}</h3>
     <!-- v-model.number 将数据尽可能的转为数字 -->
     <select v-model.number="n">
       <option value="1">1</option>
@@ -20,13 +20,13 @@
 
   // useCountStore 类似于 hooks
   const conutStore = useCountStore()
-  const { sum, school, address, bigSum, upperSchool } = toRefs(conutStore)
+  const { sum, school, address } = toRefs(conutStore)
 
   // toRefs会把所有数据都用ref包裹
   // console.log(toRefs(conutStore))
 
   // storeToRefs 只会关注store中的数据，不会对方法进行ref包裹
-  // console.log(storeToRefs(conutStore))
+  console.log(storeToRefs(conutStore))
 
   // let sum = ref(1)
   let n = ref(1)

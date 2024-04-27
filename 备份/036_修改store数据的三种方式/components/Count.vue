@@ -1,7 +1,7 @@
 <template>
   <div class="conut">
-    <h2>当前求和为：{{ sum }}，放大10倍后：{{ bigSum }} </h2>
-    <h3>欢迎来到：{{ school }}，坐落于：{{ address }}，大写：{{ upperSchool }}</h3>
+    <h2>当前求和为：{{ conutStore.sum }} </h2>
+    <h3>欢迎来到：{{ conutStore.school }}，坐落于：{{ conutStore.address }}</h3>
     <!-- v-model.number 将数据尽可能的转为数字 -->
     <select v-model.number="n">
       <option value="1">1</option>
@@ -14,24 +14,31 @@
 </template>
 
 <script setup lang="ts" name="Count">
-  import { ref, toRefs } from 'vue';
+  import { ref } from 'vue';
   import { useCountStore } from '@/store/count'
-  import { storeToRefs } from 'pinia';
 
   // useCountStore 类似于 hooks
   const conutStore = useCountStore()
-  const { sum, school, address, bigSum, upperSchool } = toRefs(conutStore)
 
-  // toRefs会把所有数据都用ref包裹
-  // console.log(toRefs(conutStore))
-
-  // storeToRefs 只会关注store中的数据，不会对方法进行ref包裹
-  // console.log(storeToRefs(conutStore))
+  // 以下两种方式都可以拿到 state 中的数据
+  // console.log(conutStore.$state.sum)
+  // 获取 reactive 定义数据的内部的ref属性 sum 不用 .value
+  console.log(conutStore.sum)
 
   // let sum = ref(1)
   let n = ref(1)
 
   function add() {
+    // 第一种修改方式
+    // conutStore.sum += n.value
+
+    // 第二种修改方式
+    // conutStore.$patch({
+    //   sum:888,
+    //   school: '啦啦啦',
+    //   address: '北京'
+    // })
+
     // 第三种修改方式，actions
     conutStore.increment(n.value)
   }

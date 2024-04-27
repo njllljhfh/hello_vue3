@@ -17,21 +17,9 @@ export const useCountStore = defineStore('count', {
   // 真正存储数据的地方
   state() {
     return {
-      sum: 1,
+      sum: 6,
       school: 'asdfasdf',
       address: '帝都'
-    }
-  },
-  getters: {
-    // 第一种写法
-    bigSum(state) {
-      return 10 * state.sum
-    },
-    // 第二种写法，用this
-    // : string 定义函数返回值类型
-    upperSchool(): string {
-      // console.log('this=',this)
-      return this.school.toUpperCase()
     }
   }
 })

@@ -26,7 +26,7 @@
   // console.log(toRefs(conutStore))
 
   // storeToRefs 只会关注store中的数据，不会对方法进行ref包裹
-  // console.log(storeToRefs(conutStore))
+  console.log(storeToRefs(conutStore))
 
   // let sum = ref(1)
   let n = ref(1)

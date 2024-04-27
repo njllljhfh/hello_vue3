@@ -15,12 +15,11 @@
 <script setup lang="ts" name="Count">
   import { ref } from 'vue';
   import { useCountStore } from '@/store/count'
-import { couldStartTrivia } from 'typescript';
 
   // useCountStore 类似于 hooks
   const conutStore = useCountStore()
 
-  // 一下两种方式都可以拿到 state 中的数据
+  // 以下两种方式都可以拿到 state 中的数据
   // console.log(conutStore.$state.sum)
   // 获取 reactive 定义数据的内部的ref属性 sum 不用 .value
   console.log(conutStore.sum)

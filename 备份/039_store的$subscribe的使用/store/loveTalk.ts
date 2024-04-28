@@ -10,7 +10,7 @@ export const useTalkStore = defineStore('talk', {
     async getATalk() {
       // 发请求
       let { data: { content } } = await axios.get('https://api.uomg.com/api/rand.qinghua?format-json')
-      // 把请求回来的字符串包装成字符串
+      // 把请求回来的字符串包装成字对象
       let obj = { id: nanoid(), title: content }
       // 头插
       this.talkList.unshift(obj)

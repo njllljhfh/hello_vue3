@@ -13,6 +13,7 @@
   // defineProps 属于宏函数，可以不用引入(vue3中，define开头的一般都不用引入)
   import { defineProps, withDefaults } from 'vue';
   import { type Persons } from '@/types'
+  
   // 只接收 list
   // defineProps(['list'])
 

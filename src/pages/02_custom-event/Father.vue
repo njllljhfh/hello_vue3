@@ -2,7 +2,8 @@
   <div class="father">
     <h3>父组件</h3>
 		<h4 v-show="toy">子给的玩具：{{ toy }}</h4>
-		<!-- 给子组件Child绑定事件 -->
+		<!-- 给子组件Child绑定事件（自定义事件）要执行的方法 -->
+		<!-- 多单词的自定义事件命名规则：官方推荐 kebab-case 格式命名（加中划线） -->
     <Child @send-toy="saveToy"/>
   </div>
 </template>

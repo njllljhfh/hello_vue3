@@ -19,9 +19,12 @@ setInterval(() => {
 }, 1000);
 
 setTimeout(() => {
+  // 解绑事件
   // emitter.off('test1')
   // emitter.off('test2')
-  emitter.all.clear()
+
+  // 解绑全部事件
+  // emitter.all.clear()
 }, 3000); */
 
 

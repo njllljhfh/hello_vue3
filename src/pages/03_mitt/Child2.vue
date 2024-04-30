@@ -17,7 +17,8 @@
 	emitter.on('send-toy',(value:any)=>{
 		toy.value = value
 	})
-	// 在组件卸载时解绑send-toy事件
+
+	// 在组件卸载时解绑send-toy事件，释放事件对象的内存资源
 	onUnmounted(()=>{
 		emitter.off('send-toy')
 	})

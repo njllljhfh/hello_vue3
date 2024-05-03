@@ -21,7 +21,7 @@
     <!-- @update:modelValue="username = $event"  实现页面上的数据变化，到变量username -->
     <!-- update:modelValue 就是一个事件的名称，只不过名字里面有":"而已 -->
     <!-- 
-      $event 到底是啥？是时候能 .target  
+      $event 到底是啥？啥时候能 .target  
       对于原生事件，$event 就是事件对象 ==> 能 .target
       对于自定义事件，$event 就是触发事件时，所传递的数据  ==> 不能 .target
     -->

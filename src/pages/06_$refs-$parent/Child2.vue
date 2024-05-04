@@ -8,9 +8,11 @@
 
 <script setup lang="ts" name="Child2">
 		import { ref } from "vue";
+
 		// 数据
 		let computer = ref('联想')
 		let book = ref(6)
+
 		// 把数据交给外部
 		defineExpose({computer,book})
 </script>

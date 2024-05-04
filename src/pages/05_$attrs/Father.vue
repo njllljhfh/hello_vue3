@@ -5,6 +5,7 @@
 		<h4>b：{{b}}</h4>
 		<h4>c：{{c}}</h4>
 		<h4>d：{{d}}</h4>
+    <!-- v-bind="{x:100,y:200}" 就相当于 :x="100" :y="200" -->
 		<Child :a="a" :b="b" :c="c" :d="d" v-bind="{x:100,y:200}" :updateA="updateA"/>
   </div>
 </template>
@@ -18,6 +19,7 @@
 	let c = ref(3)
 	let d = ref(4)
 
+  // 用于 孙组件中 修改 a 的值
 	function updateA(value:number){
 		a.value += value
 	}

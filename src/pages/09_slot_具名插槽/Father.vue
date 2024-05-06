@@ -3,6 +3,7 @@
     <h3>父组件</h3>
     <div class="content">
       <Category>
+        <!-- v-slot 只能用在 组件标签上 或 <template>标签上  -->
         <template v-slot:s2>
           <ul>
             <li v-for="g in games" :key="g.id">{{ g.name }}</li>
@@ -23,6 +24,7 @@
       </Category>
 
       <Category>
+        <!-- #s2 是 v-slot:s2 的简写 -->
         <template #s2>
           <video video :src="videoUrl" controls></video>
         </template>
@@ -45,8 +47,7 @@
     {id:'asgytdfats04',name:'斗罗大陆'}
   ])
   let imgUrl = ref('https://z1.ax1x.com/2023/11/19/piNxLo4.jpg')
-  let videoUrl = ref('http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4')
-
+  let videoUrl = ref('http://vjs.zencdn.net/v/oceans.mp4')
 </script>
 
 <style scoped>

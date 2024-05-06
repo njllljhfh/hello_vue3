@@ -10,8 +10,9 @@
 <script setup lang="ts" name="GrandChild">
   import { inject } from "vue";
 
-  let {money,updateMoney} = inject('moneyContext',{money:0,updateMoney:(param:number)=>{}})
-  let car = inject('car',{brand:'未知',price:0})
+  // inject 参数1：数据的名称，参数2：默认值
+  let {money,updateMoney} = inject('moneyContext',{money:0, updateMoney:(param:number)=>{}})
+  let car = inject('car',{brand:'未知', price:0})
 </script>
 
 <style scoped>

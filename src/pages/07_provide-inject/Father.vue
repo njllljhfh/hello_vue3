@@ -16,11 +16,15 @@
     brand:'奔驰',
     price:100
   })
+
+  // 用于 孙组件-->祖先组件 传递数据
   function updateMoney(value:number){
     money.value -= value
   }
 
   // 向后代提供数据
+  // 如可用于 祖先组件-->孙组件 的直接通信
+  // provide 参数1：数据的名称，参数2：要传递的数据
   provide('moneyContext',{money,updateMoney})
   provide('car',car)
 

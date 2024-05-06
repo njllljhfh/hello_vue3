@@ -11,6 +11,7 @@
         <img :src="imgUrl" alt="">
       </Category>
       <Category title="今日影视推荐">
+        <!-- video标签 不加 controls 视频不放不了。controls：给视频添加控制按钮-->
         <video :src="videoUrl" controls></video>
       </Category>
     </div>
@@ -28,7 +29,7 @@
     {id:'asgytdfats04',name:'斗罗大陆'}
   ])
   let imgUrl = ref('https://z1.ax1x.com/2023/11/19/piNxLo4.jpg')
-  let videoUrl = ref('http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4')
+  let videoUrl = ref('http://vjs.zencdn.net/v/oceans.mp4')
 
 </script>
 

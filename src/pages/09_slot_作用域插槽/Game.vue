@@ -1,6 +1,8 @@
 <template>
   <div class="game">
     <h2>游戏列表</h2>
+    <!-- 这里是作用域插槽，用于 数据在 子组件上 但是 页面如何呈现数据 由 父组件 来决定的场景 -->
+    <!-- slot组件 是vue内置组件，给 slot组件 传递 prop -->
     <slot :youxi="games" x="哈哈" y="你好"></slot>
   </div>
 </template>
